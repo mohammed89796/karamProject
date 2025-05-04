@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+#firstpart{
+    width: 100%;
+    height: 500px;
+    background-image: url("/images/about\ photo.jpg");
+    background-size: cover;
+    margin-bottom: 20px;
+} 
+#firstpart h1{
+    color: rgb(227, 226, 237);
+    font-size: xx-large;
+     padding-top: 250px;  
+}
+#firstpart h2{
+    color: rgb(227, 226, 237);
+    font-size: xx-large;
+    padding-bottom: 50px;  
+}
+.about-section {
+        max-width: 1000px;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+      }
+  
+      .about-section h4 {
+        color: #22425e;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+  
+      .about-section h2 {
+        font-size: 30px;
+        color: #000;
+        font-weight: 800;
+        margin-bottom: 30px;
+      }
+  
+      .about-paragraph {
+        column-count: 2;
+        column-gap: 60px;
+        font-size: 18px;
+        line-height: 2.2;
+        text-align: justify;
+        color: #333;
+        font-style:oblique;
+      }
+  
+      @media (max-width: 768px) {
+        .about-paragraph {
+          column-count: 1;
+        }
+      }
+
+      .section h1 {
+        font-size: 45px;
+        margin-bottom: 40px;
+        padding-top: 70px;
+      } 
+    
+    .section{
+        background-color: #d8fafd;
+        margin-bottom: 50px;
+    }
+     .section h1{
+        color: #22425e;
+         margin-bottom: 20px; 
+     }
+      .missions {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+         gap: 20px; 
+      }
+  
+      .mission-box {
+        width: 300px;
+        background:none;
+        padding: 20px;
+        position: relative;
+      }
+  
+      .mission-box::before {
+        content: attr(data-number);
+        position: absolute;
+        font-size: 80px;
+        color: white;
+        font-weight: bold;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%);
+        z-index: 0;
+      }
+  
+      .mission-box p {
+        font-size: 17px;
+        color: #444;
+        line-height: 1.8;
+        position: relative;
+         z-index: 1;  
+         font-style:oblique;
+      }
+
+
+      .about2-section {
+        max-width: 1000px;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+      }
+  
+      .about2-section h4 {
+        color: #22425e;
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+  
+      .about2-paragraph {
+        column-count: 2;
+        column-gap: 60px;
+        font-size: 19px;
+        line-height: 2.2;
+        text-align: justify;
+        color: #333;
+        font-style:oblique;
+      }
+  
+      @media (max-width: 768px) {
+        .about-paragraph {
+          column-count: 1;
+        }
+      }

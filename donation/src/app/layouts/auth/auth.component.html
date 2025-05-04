@@ -1,0 +1,113 @@
+<section class="auth d-flex justify-content-center align-content-center h-100 mt-5 p-5">
+  <div class="container m-5 shadow rounded-1 overflow-hidden position-relative w-50 h-75 bg-light" #container>
+    <div class="form-container sign-up-container position-absolute w-50">
+      <form
+        class="d-flex justify-content-center flex-column text-center p-5 align-items-center h-100 bg-light"
+        (ngSubmit)="register()"
+        #signUpForm="ngForm"
+      >
+        <h1 class="fw-bolder">Create Account</h1>
+        <p>Use your email for registration</p>
+
+        <input
+          class="border-0 bg-body-secondary w-100 py-2 px-4 m-2"
+          type="text"
+          placeholder="Name"
+          name="name"
+          [(ngModel)]="name"
+          required
+        />
+
+        <input
+          class="border-0 bg-body-secondary w-100 py-2 px-4 m-2"
+          type="email"
+          placeholder="Email"
+          name="email"
+          [(ngModel)]="email"
+          required
+        />
+
+        <input
+          class="border-0 bg-body-secondary w-100 py-2 px-4 m-2"
+          type="password"
+          placeholder="Password"
+          name="password"
+          [(ngModel)]="password"
+          required
+        />
+
+        <button
+          class="btn btn-danger rounded-5 px-4 py-2"
+          type="submit"
+          [disabled]="signUpForm.invalid"
+        >
+          SIGN UP
+        </button>
+
+        <p *ngIf="registerMessage"
+           [ngClass]="{ 'text-success': registerMessage.includes('success'), 'text-danger': !registerMessage.includes('success') }"
+           class="mt-3">
+          {{ registerMessage }}
+        </p>
+      </form>
+    </div>
+
+    <div class="form-container sign-in-container position-absolute top-0 w-50">
+      <form
+        class="d-flex justify-content-center align-items-center flex-column text-center p-5 h-100 bg-light"
+        (ngSubmit)="login()"
+        #signInForm="ngForm"
+      >
+        <h1 class="fw-bolder">SIGN IN</h1>
+        <p>Use your account</p>
+
+        <input
+          class="border-0 bg-body-secondary w-100 py-2 px-4 m-2 z-3"
+          type="email"
+          placeholder="Email"
+          name="email"
+          [(ngModel)]="email"
+          required
+        />
+
+        <input
+          class="border-0 bg-body-secondary w-100 py-2 px-4 m-2 z-3"
+          type="password"
+          placeholder="Password"
+          name="password"
+          [(ngModel)]="password"
+          required
+        />
+
+        <a class="p-2">Forgot your password?</a>
+
+        <button class="btn btn-danger rounded-5 px-4 py-2 z-3 position-relative" type="submit"
+                [disabled]="signInForm.invalid">
+          SIGN IN
+        </button>
+
+        <p *ngIf="loginMessage"
+           [ngClass]="{ 'text-success': loginMessage.includes('success'), 'text-danger': !loginMessage.includes('success') }"
+           class="mt-3">
+          {{ loginMessage }}
+        </p>
+      </form>
+    </div>
+
+    <div class="overlay-container position-absolute overflow-hidden">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="bg-transparent border-light rounded-5 px-4 py-2" (click)="signIn()">SIGN IN</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="bg-transparent border-light rounded-5 px-4 py-2" (click)="signUp()">SIGN UP</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

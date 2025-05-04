@@ -1,0 +1,112 @@
+<h2 class="header mt-5 pt-5 text-center">Donate now</h2>
+
+<div class="d-flex justify-content-center align-items-center">
+  <form class="w-75" (ngSubmit)="submitForm()">
+    <div class="mb-3 mt-5">
+      <input
+        class="form-control form-control-lg w-100"
+        type="text"
+        name="name"
+        [(ngModel)]="formData.name"
+        required
+        placeholder="Full Name*"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        class="form-control form-control-lg w-100"
+        type="email"
+        name="email"
+        [(ngModel)]="formData.email"
+        required
+        placeholder="Email*"
+      />
+    </div>
+
+    <div class="mb-3">
+      <select
+        class="form-select form-select-lg"
+        name="currency"
+        [(ngModel)]="formData.currency"
+        required
+      >
+        <option value="">Select Currency</option>
+        <option value="EGY">EGY</option>
+        <option value="USD">USD</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <select
+        class="form-select form-select-lg"
+        name="nationality"
+        [(ngModel)]="formData.nationality"
+        required
+      >
+        <option value="">Select Nationality</option>
+        <option value="Egypt">Egypt</option>
+        <option value="China">China</option>
+        <option value="Canada">Canada</option>
+        <option value="France">France</option>
+        <option value="Australia">Australia</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <select
+        class="form-select form-select-lg"
+        name="donation_type"
+        [(ngModel)]="formData.donation_type"
+        required
+      >
+        <option value="">Donation Type</option>
+        <option value="general">General Donation</option>
+        <option value="zakat">Zakat</option>
+        <option value="sadaka">Sadaka Garya</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <input
+        class="form-control form-control-lg w-100"
+        type="text"
+        name="phone"
+        [(ngModel)]="formData.phone"
+        required
+        placeholder="Phone Number*"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        class="form-control form-control-lg w-100"
+        type="number"
+        name="amount"
+        [(ngModel)]="formData.amount"
+        required
+        placeholder="Amount*"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        class="form-control form-control-lg w-100"
+        type="text"
+        name="address"
+        [(ngModel)]="formData.address"
+        required
+        placeholder="Address*"
+      />
+    </div>
+
+    <input type="hidden" name="place" [(ngModel)]="formData.place" value="alorman" />
+
+    <div class="button d-flex justify-content-center rounded mb-5">
+      <button type="submit" class="btn btn-outline-info">Donate Now</button>
+    </div>
+
+    <div *ngIf="successMsg" class="alert alert-success mt-3">{{ successMsg }}</div>
+    <div *ngIf="errorMsg" class="alert alert-danger mt-3">{{ errorMsg }}</div>
+  </form>
+</div>

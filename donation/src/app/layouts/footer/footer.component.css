@@ -1,0 +1,35 @@
+ul{
+    list-style: none;
+}
+
+
+ul li a.detail:hover {
+    color: #EDA827  !important;
+  }
+
+.rgba{
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.image{
+    height: 350px;
+    background: url("/images/footer-bg.jpg") center center/cover no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+}
+
+
+
+#footer{
+
+background-color:white;
+text-align: center;
+padding: 8px 0;
+font-size: 17px;
+}
+
+#footer a{
+    
+ color: #DC3139;
+}

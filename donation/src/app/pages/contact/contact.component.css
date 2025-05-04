@@ -1,0 +1,63 @@
+.contact-section {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .contact-section h3 {
+    color: #00a0df;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation-name: example;
+  animation-duration: 4s;
+  animation-delay: -2s;
+  }
+  
+  .contact-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    opacity:90%;
+  }
+  
+  .contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    text-align: left;
+  }
+  
+  .contact-info p {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #333;
+  text-align: left;
+  }
+  
+  .contact-info i {
+    color: #d03232;
+    float: left;
+    width: 25px;
+    text-align: center;
+  }
+  
+  .contact-info .fa-whatsapp {
+    color: #25D366;
+  }
+  
+  .map {
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+  }

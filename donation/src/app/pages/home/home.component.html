@@ -1,0 +1,100 @@
+<section class="home">
+  <!-- 🔓 Logout Button -->
+
+  <div class="slider mt-5 pt-5">
+    <div class="container w-75 p-5">
+      <div>
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/images/slider 1.jpg" class="d-block w-100 opacity-75" alt="1" />
+              <div class="carousel-caption fw-bolder text-white text-start">
+                <h4 class="slide-up">Support medical treatments</h4>
+                <p class="slide-up delay-1">
+                  Your donation helps provide life-saving treatments for those in need, offering hope and recovery to individuals facing medical challenges. Every contribution brings a step closer to healing.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/slider 2.jpg" class="d-block w-100 opacity-75" alt="2" />
+              <div class="carousel-caption fw-bolder text-white text-start">
+                <h4 class="slide-up">Feed hungry families</h4>
+                <p class="slide-up delay-1">
+                  By donating, you help provide essential meals to families who struggle to find food. Every meal you sponsor brings hope and nourishment to those who need it most.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/slider 3.jpg" class="d-block w-100 opacity-75" alt="0" />
+              <div class="carousel-caption fw-bolder text-white text-start">
+                <h4 class="slide-up">Bring hope to those in need</h4>
+                <p class="slide-up delay-1">
+                  Bringing hope to those in need is a powerful way to make a difference. Even the smallest acts of kindness can uplift someone’s spirit, offering them strength during difficult times. Whether it's a simple gesture, a listening ear, or lending a hand, we can all contribute to creating a world where hope shines brightly for everyone.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="icons">
+    <div class="container p-5">
+      <div class="donation-section text-center bg-white opacity-75 text-black p-5">
+        <h1 class="p-2 fw-bolder fs-1">HOW TO DONATE</h1>
+        <p class="description fs-4 fw-medium">
+          You can donate with more than one payment method easily and conveniently
+        </p>
+        <p class="sub-text">Choose the appropriate donation method</p>
+
+        <div class="row d-flex m-5">
+          <div class="col-2">
+            <i class="fas fa-credit-card fa-3x p-3"></i>
+            <p>Donate online</p>
+          </div>
+          <div class="col-2">
+            <i class="fas fa-sms fa-3x p-3"></i>
+            <p>short message</p>
+          </div>
+          <div class="col-2">
+            <i class="fas fa-university fa-3x p-3"></i>
+            <p>Bank account</p>
+          </div>
+          <div class="col-2">
+            <i class="fas fa-user-tie fa-3x p-3"></i>
+            <p>Doorstep delivery by our representative</p>
+          </div>
+          <div class="col-2">
+            <i class="fas fa-plane-departure fa-3x p-3"></i>
+            <p>From outside Egypt</p>
+          </div>
+          <div class="col-2">
+            <i class="fas fa-phone fa-3x p-3"></i>
+            <p>Special programs</p>
+          </div>
+        </div>
+        <div class="text-end p-3" *ngIf="isLoggedIn">
+          <button class="btn btn-danger" (click)="logout()">Log out</button>
+        </div>
+        <div class="text-end p-3" *ngIf="isLoggedout">
+          <button class="btn btn-danger" (click)="login()">Log in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

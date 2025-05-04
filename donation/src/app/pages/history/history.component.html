@@ -1,0 +1,30 @@
+<h2 class="text-center p-5">Donation History</h2>
+
+<div class="container">
+  <div *ngIf="historyItems.length > 0; else noHistory">
+    <div *ngFor="let item of historyItems" class="row shadow m-5">
+      <div class="product d-flex m-2">
+        <div class="img w-25">
+          <img [src]="item.image" class="w-100" *ngIf="item.image" />
+        </div>
+        <div class="information w-50 text-center px-5">
+          <div class="data">
+            <h1 class="text-xxl-center font-bold mb-4">{{ item.name }}</h1>
+            <p><strong>Email:</strong> {{ item.email }}</p>
+            <p><strong>Phone:</strong> {{ item.phone }}</p>
+            <p><strong>Address:</strong> {{ item.address }}</p>
+            <p><strong>Amount:</strong> {{ item.amount }} {{ item.currency }}</p>
+            <p><strong>Place:</strong> {{ item.place }}</p>
+            <p><strong>Donation Type:</strong> {{ item.donation_type }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noHistory>
+    <p class="text-center text-muted">لا يوجد تاريخ تبرعات لعرضه.</p>
+  </ng-template>
+</div>
+
+<button type="button" (click)="clearHistory()" class="btn btn-outline-warning center m-5 ps-5 pe-5">Clear history</button>

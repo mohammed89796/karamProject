@@ -1,0 +1,63 @@
+<nav class="navbar bg-body-tertiary fixed-top shadow  ">
+  <div class="container-fluid">
+    <h1 class="navbar-brand fs-2 fw-bolder ms-5">KARAM</h1>
+
+
+
+
+
+
+     <div >
+      <ul class="nav justify-content-center  ">
+
+        <li class="nav-item ms-5 fs-5 fw-bold">
+          <a class="nav-link text-black active" aria-current="page"  [routerLink]="'home'" routerLinkActive="text-custom-orange" >Home</a>
+        </li>
+
+        <li class="nav-item ms-5 fs-5 fw-bold ">
+          <a class="nav-link text-black" [routerLink]="'donations'" routerLinkActive="text-custom-orange" > Donations</a>
+        </li>
+
+        
+        
+       
+       
+      </ul>
+    
+    </div>
+
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end bg-custom-blue text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header mt-3 me-2">
+        <button type="button" class="btn-close text-custom-white fs-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body ">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ms-5 p-5">
+          <li class="nav-item">
+            <a class="nav-link active fs-4 fw-bolder text-custom-white pb-2" aria-current="page"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4 fw-bolder text-custom-white pb-2" [routerLink]="'about'" routerLinkActive="text-custom-orange">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4 fw-bolder text-custom-white pb-2" [routerLink]="'history'">Donation History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4 fw-bolder text-custom-white pb-2" [routerLink]="'contact'" routerLinkActive="text-custom-orange" >Contact US</a>
+          </li>     
+        </ul>
+     
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
